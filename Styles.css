@@ -1,0 +1,298 @@
+
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/*Typography and colors*/
+:root {
+     /*
+    |=============|
+    |    FONTS    |
+    |=============|  
+    */
+    --font-P:'Libre Franklin';
+    /*fonts-W*/
+    --font-L: 300;
+    --font-M: 600;
+    --font-B: 700;
+    /*font size*/
+    --font-big:2rem;
+    --font-medium:1.2rem;
+    --font-small:0.975rem;
+    /*
+    |=============|
+    |    COLORS   |
+    |=============|  
+    */
+    --color-blue:hsl(223, 87%, 63%);
+    /*Secondary*/
+    --color-Sblue:hsl(223, 100%, 88%);
+    --color-red:hsl(354, 100%, 66%);
+    /*Neutral*/
+    --color-gray:hsl(0, 0%, 59%);
+    --color-blueDark:hsl(209, 33%, 12%);
+    /*basics*/
+    --color-white:#fff;
+    --color-black:#191919;
+        /*
+    |=============|
+    |    SHADOWS  |
+    |=============|  
+    */
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --heavy-shadow: rgba(0, 0, 0, 0.4);
+
+}
+/*margins and space*/
+:root{
+    /* margins */
+    --mb-1: 1rem;
+    --mb-2: 2rem;
+    --mb-3: 3rem;
+    --mb-4: 4rem;
+    /* space */
+    --space-normal:1.5px;
+    --space-big:3px;
+    /* z-index */ 
+    --z-tooltip:10;
+    --z-fixed:100;
+    /*  transition */
+    --transition:0.3s all ease-in-out;
+    /*radius*/
+    --radius:.5rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background:var(--color-white);
+    font-family: var(--font-P);
+}
+img {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--color-blue);
+}
+.container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+h1, h2, h3, h4 {
+    letter-spacing: var(--space-normal);
+}
+h1 span {
+    font-weight: var(--font-B);
+}
+/*container__section-top*/
+/*logo*/
+.container__section-top {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin: 0% auto;
+}
+.container__section-top .logo__top {
+    width: 50%;
+    padding: 10px 0;
+    margin: 18px auto;
+}
+.container__section-top .logo__top a img {
+    width: 15%;
+}
+.container__section-top .title__h1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 5px;
+    margin: 5% auto;
+}
+.container__section-top .title__h1 h1 {
+    color: var(--color-black);
+    color: var(--color-black);
+    font-weight: var(--font-L);
+    font-size: var(--font-big);
+    font-weight: var(--font-L);
+    font-family: var(--font-P);
+    opacity: 0.5;
+    letter-spacing: var(--space-big);
+}
+.container__section-top .title__h1 span {
+    color: var(--color-black);
+    font-weight: var(--font-B);
+    font-size: var(--font-big);
+    letter-spacing: var(--space-normal);
+}
+.container__section-top .title__h4 {
+    color:var(--color-black);
+    font-family: var(--font-P);
+    font-weight: var(--font-L);
+    font-size: var(--font-small);
+    letter-spacing: var(--space-normal);
+}
+/*input*/
+.container__form {
+    position: relative;
+    width: 50%;
+    padding: 20px 0 ;
+    justify-content: center;
+    margin: -1.5% auto;
+}
+.container__form .form__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.container__form .form__input input {
+    outline: none;
+    padding: 16px 0;
+    border-color: var(--color-Sblue);
+    border: 1px solid rgb(194, 211, 255);
+    border-radius: 1rem;
+    width: 60%;
+    color: var(--color-black);
+    font-weight: var(--font-L);
+    font-size: 14px;
+    padding-left: 16px;
+    text-align: left;
+    font-family: var(--font-B);
+}
+.container__form .form__input input::placeholder {
+    color: var(--color-Sblue);
+    font-weight: var(--font-L);
+}
+.container__form .form__input input[type="email"]:invalid{
+    border-color: var(--color-red);
+}
+.container__form .form__input .btn__input {
+    width: 40%;
+    padding: 16px 0;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-weight: var(--font-M);
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 1px 3px 0px 0px rgba(194, 211, 255, 0.4),
+                0px 2px 0px 0px rgba(194, 211, 255, 0.5),
+                0px 2px 0px 0px rgba(194, 211, 255, 0.3);
+    transition: var(--transition);
+}
+.container__form .form__input .btn__input:hover {
+    background-color:  rgba(79, 125, 243, 0.8);
+}
+.container__form .form__input .btn__input:active {
+    background-color:  rgba(79, 125, 243, 1);
+}
+
+/*img*/
+.container__img {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 1.5% auto;
+}
+.container__img img {
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+
+/*RRSS*/
+.container__rrss {
+    margin: 0 auto;
+    width: 40%;
+    position: relative;
+    align-items: center;
+}
+.container__rrss ul{
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+.container__rrss ul li {
+    border: 1px solid rgb(194, 211, 255);
+    padding: 5px 5px;
+    align-items: center;
+    border-radius: 2rem;
+}
+.container__rrss ul li:hover {
+    background-color: rgba(79, 125, 243, 1);
+}
+.container__rrss ul li i {
+    font-size: 20px;
+}
+.container__rrss ul li i:hover {
+    color: var(--color-white);
+}
+footer {
+    text-align: center;
+    font-weight: 100;
+}
+/*media queries*/
+@media screen and (max-width: 480px) {
+    .container__section-top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .container__section-top .title__h1 h1,
+    .container__section-top .title__h1 span{
+        font-size: var(--font-small);
+    }
+    .container__section-top .title__h4 {
+        font-size: 10px;
+        font-weight: 100;
+    }
+    .container__form {
+        width: 300px;
+    }
+    .container__form .form__input {
+        display: flex;
+        flex-direction: column;
+    }
+    .container__form .form__input input, 
+    .container__form .form__input .btn__input{
+        width: 100%;
+    }
+}
+@media screen and(min-width:1440px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+/*
+- Mobile: 375px
+- Desktop: 1440px
+    .errorMSG {
+    display: none;
+  }*/
+/*Header*/
