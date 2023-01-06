@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta author="Emmanuel saavedra" date="22/12/2022">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="styles/Styles.css">
+  <title>Frontend Mentor | Ping coming soon page</title>
+</head>
+<body>
+  <!--sectionTop-->
+  <section class="container">
+   <div class="container__section-top">
+    <!--logo-->
+    <div class="logo__top">
+      <a href="#!" target="_blank">
+        <img src="images/logo.svg" alt="logo_ping">
+      </a>
+    </div>
+    <!--title-->
+    <div class="title__top">
+      <div class="title__h1">
+        <h1>We are launching</h1> <span class="span">soon!</span>
+      </div>
+      <div class="title__h4">
+        <h4>Subscribe and get notifed</h4>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!--form-->
+  <section class="container">
+    <div class="container__form">
+    <form name="email"  class="form"  novalidate="true">
+      <div class="form__input">
+        <label for="email" ></label>
+        <input type="email" placeholder="Your email address..." pattern="^([A-Za-z\d.-]+)@([a-z\d]+)(\.[a-z]{2,24}){1,8}$" required>
+        <button class="btn__input" id="btn__submit">Notify Me</button>
+      </div>
+    </form>
+  </div>
+  </section>
+  <section class="container">
+    <div class="container__img">
+      <img src="images/illustration-dashboard.png" alt="">
+    </div>
+  </section>
+
+
+  <section class="container">
+    <div class="container__rrss">
+      <ul>
+        <li><a href="#!"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#!"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#!"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </section>
+  <!--footer-->
+  <footer>
+    &copy;Copyright Ping. All rights reserved.
+  </footer>
+</body>
+  <!-- js -->
+<script src="js/App.js"></script>
+</html>
+<!--
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Emmanuel Saavedra</a>.
+    </p>
+-->
